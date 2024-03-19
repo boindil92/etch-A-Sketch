@@ -1,8 +1,32 @@
-const container=document.querySelector("#container");
+const superContainer=document.querySelector("#superContainer");
+
+let grid=undefined;
+
+let play=document.querySelector("#play");
+
+play.addEventListener("click",clear);
+play.addEventListener("click",getPlayerChoice);
+play.addEventListener("click",createHetchASketch);
+
+function clear () {
+   superContainer.removeChild(container);
+}
+
+
+
+function getPlayerChoice (){
+   grid= prompt("Please enter a number");
+}
+
+function createHetchASketch () {
+
+
+
 const gridColumn= [];
 const gridRaw=[];
 
-let grid=9
+let container=document.createElement("div");
+superContainer.appendChild(container);
 
 for(let i=0 ; i<grid ; i++) {
    gridColumn[i] = document.createElement("div");
@@ -20,9 +44,13 @@ for(let i=0 ; i<grid ; i++) {
 }
 
 container.addEventListener("mouseover", marker);
+
 function marker (event) {
-let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
-target.classList.remove("raw");
-target.classList.add("passedRaw");
+
+   let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
+   target.classList.remove("raw");
+   target.classList.add("passedRaw");
       
+}
+
 }
