@@ -1,0 +1,19 @@
+.raw {
+
+    color: red;
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 50px;
+     flex: 1; 
+
+  }
+
+.column {
+    display: flex;
+    /* color: red;
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 50px;
+     flex: 1;  */
+
+  }
