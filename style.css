@@ -1,32 +1,23 @@
 .raw {
 
-    color: red;
-    background: peachpuff;
-    border: 4px solid brown;
-    height: 40px;
-     flex: 1; 
-
-  }
+    color: rgb(235, 54, 96);
+    background-color: rgb(255, 33, 96);
+    border: 2px solid rgb(112, 3, 70);
+    aspect-ratio: 1/1;
+    flex: 1; 
+    
+}
 
 .passedRaw {
 
     color: rgb(0, 153, 255);
     background: rgb(101, 231, 210);
-    border: 4px solid rgb(18, 6, 179);
-    height: 40px;
-     flex: 1; 
-
-  }
-
-
+    border: 2px solid rgb(18, 6, 179);
+    aspect-ratio: 1/1;
+    flex: 1; 
+}
 
 .column {
     display: flex;
-    /* color: red;
-    background: peachpuff;
-    border: 4px solid brown;
-    height: 50px;
-     flex: 1;  */
-
-  }
+}
 
