@@ -12,9 +12,17 @@ for(let i=0 ; i<grid ; i++) {
    for (let a=0; a<grid; a++ ) {
       gridRaw[a] = document.createElement("div");
       gridRaw[a].classList.add("raw");
+      gridRaw[a].addEventListener("mouseover", marker);
       gridColumn[i].appendChild(gridRaw[a]);
-      gridRaw[a].textContent="yo";
+     // gridRaw[a].textContent="yo";
+     function marker () {
+
+      gridRaw[a].classList.remove("raw");
+      gridRaw[a].classList.add("passedRaw");
+   
+   }
 
    }
 
 }
+
