@@ -94,16 +94,23 @@ button1.removeEventListener("click",createHetchASketch);
 button2.removeEventListener("click",createHetchASketch);
 button3.removeEventListener("click",createHetchASketch);
 button4.removeEventListener("click",createHetchASketch);
+play.removeEventListener("click",getPlayerChoice);
+play.removeEventListener("click",getColorChoice);
 
 container.addEventListener("mouseover", marker);
 
 function marker (event) {
 
-   let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
+   let target=event.target; 
    target.classList.remove(colorBefore);
    target.classList.add(colorAfter);
 }
+
 play.addEventListener("click",clear);
+button1.addEventListener("click",clear);
+button2.addEventListener("click",clear);
+button3.addEventListener("click",clear);
+button4.addEventListener("click",clear);
 
 
 function clear () {
@@ -112,5 +119,9 @@ function clear () {
    superContainer.removeChild(button2);
    superContainer.removeChild(button3);
    superContainer.removeChild(button4);
+
 }
+play.addEventListener("click",getPlayerChoice);
+play.addEventListener("click",getColorChoice);
+
 }
