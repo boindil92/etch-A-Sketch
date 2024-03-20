@@ -23,6 +23,9 @@ function getPlayerChoice (){
 function getColorChoice () {
    alert("Please, choose one color");
 
+   play.removeEventListener("click",getPlayerChoice);
+   play.removeEventListener("click",getColorChoice);
+
    button1=document.createElement("button");
    button1.textContent="yellow";
    button1.setAttribute("style", "color: black; background: yellow;");
