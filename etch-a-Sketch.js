@@ -5,6 +5,18 @@ let grid=undefined;
 let play=document.querySelector("#play");
 
 
+
+
+let yellow="yellow";
+let green="green";
+let black="black";
+let pink="pink";
+let blue="blue";
+
+let colorBefore=yellow;
+let colorAfter=green;
+
+
 play.addEventListener("click",getPlayerChoice);
 play.addEventListener("click",createHetchASketch);
 
@@ -14,7 +26,9 @@ play.addEventListener("click",createHetchASketch);
 
 function getPlayerChoice (){
    grid= prompt("Please enter a number");
+
 }
+
 
 function createHetchASketch () {
 
@@ -33,7 +47,7 @@ superContainer.appendChild(container);
 
          for (let a=0; a<grid; a++ ) {
             gridRaw[a] = document.createElement("div");
-            gridRaw[a].classList.add("raw");
+            gridRaw[a].classList.add(colorBefore);
             gridColumn[i].appendChild(gridRaw[a]);
 
 
@@ -46,8 +60,8 @@ superContainer.appendChild(container);
  function marker (event) {
 
     let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
-    target.classList.remove("raw");
-    target.classList.add("passedRaw");
+    target.classList.remove(colorBefore);
+    target.classList.add(colorAfter);
       
    }
 play.addEventListener("click",clear);

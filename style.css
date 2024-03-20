@@ -1,23 +1,56 @@
-.raw {
+.column {
+    display: flex;
+}
+
+
+.pink {
 
     color: rgb(235, 54, 96);
     background-color: rgb(255, 33, 96);
-    border: 2px solid rgb(112, 3, 70);
+    border: 1px solid rgb(112, 3, 70);
+    box-sizing: border-box;
     aspect-ratio: 1/1;
     flex: 1; 
     
 }
 
-.passedRaw {
+.blue {
 
     color: rgb(0, 153, 255);
     background: rgb(101, 231, 210);
-    border: 2px solid rgb(18, 6, 179);
+    border: 1px solid rgb(18, 6, 179);
+    box-sizing: border-box;
     aspect-ratio: 1/1;
     flex: 1; 
 }
 
-.column {
-    display: flex;
+.yellow {
+    color: rgb(203, 196, 2);
+    background: rgb(251, 255, 0);
+    border: 1px solid rgb(134, 148, 0);
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    flex: 1; 
+
+}
+
+.green {
+    color: rgba(14, 255, 2, 0.846);
+    background: rgb(85, 255, 0);
+    border: 1px solid rgb(40, 143, 0);
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    flex: 1; 
+
+}
+
+.black {
+    color: #000000;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    flex: 1; 
+
 }
 
