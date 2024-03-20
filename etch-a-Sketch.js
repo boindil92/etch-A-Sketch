@@ -1,10 +1,6 @@
 const superContainer=document.querySelector("#superContainer");
-
 let grid=undefined;
-
 let play=document.querySelector("#play");
-
-
 
 
 let yellow="yellow";
@@ -13,26 +9,19 @@ let black="black";
 let pink="pink";
 let blue="blue";
 
-let colorBefore=pink;
+let colorBefore=undefined;
 let colorAfter=blue;
-
 
 play.addEventListener("click",getPlayerChoice);
 play.addEventListener("click",getColorChoice);
 
 
-
-
-
-
 function getPlayerChoice (){
    grid= prompt("Please enter a number");
-
 }
 
 function getColorChoice () {
    alert("Please, choose one color");
-
 
    button1=document.createElement("button");
    button1.textContent="yellow";
@@ -64,25 +53,24 @@ function getColorChoice () {
 
 }
 
+
 function toYellow () {
    colorBefore=yellow;
-
 }
+
 function toGreen () {
    colorBefore=green;
 }
+
 function toBlack () {
    colorBefore=black;
 }
+
 function toPink () {
    colorBefore=pink;
 }
  
-
-
 function createHetchASketch () {
-
-
 
 const gridColumn= [];
 const gridRaw=[];
@@ -90,35 +78,33 @@ const gridRaw=[];
 let container=document.createElement("div");
 superContainer.appendChild(container);
 
-   for(let i=0 ; i<grid ; i++) {
-      gridColumn[i] = document.createElement("div");
-      gridColumn[i].classList.add("column");
-      container.appendChild(gridColumn[i]);
+for(let i=0 ; i<grid ; i++) {
+   gridColumn[i] = document.createElement("div");
+   gridColumn[i].classList.add("column");
+   container.appendChild(gridColumn[i]);
 
-         for (let a=0; a<grid; a++ ) {
-            gridRaw[a] = document.createElement("div");
-            gridRaw[a].classList.add(colorBefore);
-            gridColumn[i].appendChild(gridRaw[a]);
-
-
+      for (let a=0; a<grid; a++ ) {
+         gridRaw[a] = document.createElement("div");
+         gridRaw[a].classList.add(colorBefore);
+         gridColumn[i].appendChild(gridRaw[a]);
          }
-
    }
+
 button1.removeEventListener("click",createHetchASketch);
 button2.removeEventListener("click",createHetchASketch);
 button3.removeEventListener("click",createHetchASketch);
 button4.removeEventListener("click",createHetchASketch);
 
- container.addEventListener("mouseover", marker);
+container.addEventListener("mouseover", marker);
 
- function marker (event) {
+function marker (event) {
 
-    let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
-    target.classList.remove(colorBefore);
-    target.classList.add(colorAfter);
-      
-   }
+   let target=event.target;  //event.target è una propietà che indica l' elemento appena raggiunto dal mouse
+   target.classList.remove(colorBefore);
+   target.classList.add(colorAfter);
+}
 play.addEventListener("click",clear);
+
 
 function clear () {
    superContainer.removeChild(container);
@@ -126,7 +112,5 @@ function clear () {
    superContainer.removeChild(button2);
    superContainer.removeChild(button3);
    superContainer.removeChild(button4);
-   
 }
-
 }
