@@ -37,7 +37,7 @@ function getPlayerChoice (){
     
 
     container.addEventListener("mouseover", marker);
-           
+    let color="#0000ff";      
     function marker (event) {
 
         const piker=document.querySelector("#piker");
